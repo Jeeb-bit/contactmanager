@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="normal/base::layout(~{::section})">
+<head>
+<meta charset="UTF-8" />
+<title>this is home page</title>
+</head>
+<body>
+	<section>
+		<div class="card mr-1">
+			<div class="my-card">
+				<div class="col-md-12">
+
+					<h3 class="text-center mt-3">this is home page</h3>
+					<div class="container text-center">
+
+						<a id="contact-link" href="#" th:href="@{/user/Add_contact}"
+							class="items"> Add new contact</a>
+					</div>
+
+
+
+				</div>
+			</div>
+		</div>
+
+
+		<script>
+		$(document).ready( ()=> {
+		$(".items").removeClass("active");
+		$("#home-link").addClass("active");
+		
+		
+		});
+		</script>
+
+	</section>
+</body>
+</html>

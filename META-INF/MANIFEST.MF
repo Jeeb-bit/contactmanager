@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ContactSmartManager
+Bundle-SymbolicName: ContactSmartManager
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-16
+Automatic-Module-Name: ContactSmartManager
+Export-Package: com.Smart.manager,
+ com.Smart.manager.Dao,
+ com.Smart.manager.controller,
+ com.Smart.manager.emailservice,
+ com.Smart.manager.entities,
+ com.Smart.manager.helper,
+ com.Smart.manager.security

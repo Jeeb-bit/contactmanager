@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="normal/base::layout(~{::section})">
+<head>
+<meta charset="UTF-8" />
+<title>this is home page</title>
+</head>
+<body>
+	<section>
+		<div class="card mr-2">
+			<div class="my-card">
+				<div class="col-md-10 offset-md-1">
+					<div class="container text-center">
+						<img  style="width:200px; height:200px;" class="my_image_details" src=""
+							th:src="@{'/image/'+${contacts.image}}" alt="profile" />
+						<h3 class="mt-3">
+							<span th:text="${contacts.name}"></span>
+						</h3>
+
+
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col">cId</th>
+									<th scope="col"><span th:text="${contacts.cId}"></span></th>
+
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">Email</th>
+									<td><span th:text="${contacts.email}"></span></td>
+
+								</tr>
+								<tr>
+									<th scope="row">Phone</th>
+									<td><span th:text="${contacts.phonenumber}"></span></td>
+
+								</tr>
+
+								<tr>
+									<th scope="row">Phone</th>
+									<td><span th:text="${contacts.phonenumber}"></span></td>
+
+								</tr>
+							</tbody>
+
+						</table>
+						<div class="discription mt-3">
+							<th:block th:text="${contacts.description}"></th:block>
+						</div>
+						<div class="container mt-2">
+							<a th:onclick="|deletecontact(${contacts.cId})|" 
+								class="btn btn-danger btn-block" href="#" role="button">delete</a>
+							
+							<button class="btn btn-success btn-sm btn-block">update</button>
+						</div>
+
+
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
